@@ -29,9 +29,11 @@ Fully connected CRF wrapper
 > pip install CRF/
 # Procedure
 - Training the DSRG model
-  - modify the path if you put your VOC2012 elsewhere 
-  - feel free to tune any hyper-parameter, i.e max_iter, batch,...
-  - run "bash train.sh"
+  > - modify the path if you put your VOC2012 elsewhere 
+  > 
+  > - feel free to tune any hyper-parameter, i.e max_iter, batch,...
+  > 
+  > - run "bash train.sh"
 
 - Inferring/ Generating predcition map 
 - we provide two option for inferring 
