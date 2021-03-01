@@ -25,7 +25,7 @@ Decompress provided localization cues:
 # Prerequisites
 Fully connected CRF wrapper
 > apt-get install libeigen3-dev
-  pip install CRF/
+> pip install CRF/
 
 # Acknowledgment
 This code is heavily borrowed from [SEC_pytorch](https://github.com/halbielee/SEC_pytorch) and [DSRG](https://github.com/speedinghzl/DSRG)
