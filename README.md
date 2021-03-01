@@ -31,16 +31,17 @@ Fully connected CRF wrapper
 - Training the DSRG model
   - modify the path if you put your VOC2012 elsewhere 
   - feel free to tune any hyper-parameter, i.e max_iter, batch,...
-> bash train.sh
+  - run "bash train.sh"
 
 - Inferring/ Generating predcition map 
 - we provide two option for inferring 
   - set color_mask as 0 to generate label_mask
   - set color_mask as 1 to generate colored mask (with it post-processed result, i.e. *pred*) 
-> bash test_multiprocess.sh
+  - run "bash test_multiprocess.sh"
 
 - Evaluation the performance
-> bash evaluation.sh
+  - we generate the result text file   
+  - run "bash evaluation.sh"
 
 # Acknowledgment
 This code is heavily borrowed from [SEC_pytorch](https://github.com/halbielee/SEC_pytorch) and [DSRG](https://github.com/speedinghzl/DSRG)
