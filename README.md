@@ -27,7 +27,7 @@ Fully connected CRF wrapper
 > apt-get install libeigen3-dev
 > 
 > pip install CRF/
-# Procedure
+# Procedures
 Training the DSRG model
   > - modify the path if you put your VOC2012 elsewhere 
   > 
@@ -35,14 +35,14 @@ Training the DSRG model
   > 
   > - run "bash train.sh"
 
-Inferring/ Generating predcition map (two options)
+Inferring/ Generating predcition maps (two options)
   > - set color_mask as 0 to generate label_mask
   > 
-  > - set color_mask as 1 to generate colored mask (with it post-processed result, i.e. *pred*) 
+  > - set color_mask as 1 to generate colored mask (with it post-processed result) 
   > 
   > - run "bash test_multiprocess.sh"
 
-Evaluation the performance
+Evaluation performances
  > - we generate the result text file   
  > - run "bash evaluation.sh"
 
