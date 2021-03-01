@@ -10,7 +10,7 @@ In this implementation, we mainly consider the Pascal VOC 2012 dataset (VOC2012)
 1. Download offical VOC2012 from [here](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/index.html)
 2. Download augmented dataset from [here](https://www.dropbox.com/s/oeu149j8qtbs1x0/SegmentationClassAug.zip?dl=0)
 3. You can check this [link](https://www.sun11.me/blog/2018/how-to-use-10582-trainaug-images-on-DeeplabV3-code/) for more informaiton
-4. Put your VOC2012 directory to *dataset/PascalVOC*
+4. Put your VOC2012 development kit to *dataset/PascalVOC*
 
 # Pretrained Model
 We use ImageNet pretrained model:
@@ -18,9 +18,14 @@ We use ImageNet pretrained model:
 - Put it in *./datalist/PascalVOC*
 
 # Localization Cues Preparation
-Some weakly supervised models reply on localization cues (or seeds) as weakly-labels, decompress provided localization cues:
+Decompress provided localization cues:
 - gzip -kd datalist/PascalVOC/localization_cues.pickle.gz
 - Please check the [offical repository](https://github.com/kolesman/SEC) for details
 
+# Prerequisites
+Fully connected CRF wrapper
+> apt-get install libeigen3-dev
+> pip install CRF/
+> 
 # Acknowledgment
 This code is heavily borrowed from [SEC_pytorch](https://github.com/halbielee/SEC_pytorch) and [DSRG](https://github.com/speedinghzl/DSRG)
