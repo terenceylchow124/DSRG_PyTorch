@@ -27,6 +27,15 @@ Fully connected CRF wrapper
 > apt-get install libeigen3-dev
 > 
 > pip install CRF/
+# Procedure
+- Training the DSRG model
+> bash train.sh
+
+- Inferring/ Generating predcition map 
+>  bash test_multiprocess.sh
+
+- Evaluation the performance
+> bash evaluation.sh
 
 # Acknowledgment
 This code is heavily borrowed from [SEC_pytorch](https://github.com/halbielee/SEC_pytorch) and [DSRG](https://github.com/speedinghzl/DSRG)
