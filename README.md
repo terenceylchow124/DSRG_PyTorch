@@ -25,6 +25,7 @@ Decompress provided localization cues:
 # Prerequisites
 Fully connected CRF wrapper
 > apt-get install libeigen3-dev
+> 
 > pip install CRF/
 
 # Acknowledgment
