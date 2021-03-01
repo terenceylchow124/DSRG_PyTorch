@@ -28,21 +28,21 @@ Fully connected CRF wrapper
 > 
 > pip install CRF/
 # Procedure
-> - Training the DSRG model
+Training the DSRG model
   > - modify the path if you put your VOC2012 elsewhere 
   > 
   > - feel free to tune any hyper-parameter, i.e max_iter, batch,...
   > 
   > - run "bash train.sh"
 
-> - Inferring/ Generating predcition map (two options)
+Inferring/ Generating predcition map (two options)
   > - set color_mask as 0 to generate label_mask
   > 
   > - set color_mask as 1 to generate colored mask (with it post-processed result, i.e. *pred*) 
   > 
   > - run "bash test_multiprocess.sh"
 
-> - Evaluation the performance
+Evaluation the performance
  > - we generate the result text file   
  > - run "bash evaluation.sh"
 
