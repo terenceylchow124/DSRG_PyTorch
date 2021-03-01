@@ -1,7 +1,9 @@
 # DSRG_PyTorch
 This is a unofficial PyTorch implementation of "Weakly-Supervised Semantic Segmentation Network with Deep Seeded Region Growing" (CVPR2018). Please check the link below for official repository:
-- CVPR Conference:  https://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Weakly-Supervised_Semantic_Segmentation_CVPR_2018_paper.pdf
-- Offical Caffe Implementation: https://github.com/speedinghzl/DSRG
+- [CVPR conference paper] (https://openaccess.thecvf.com/content_cvpr_2018/papers/Huang_Weakly-Supervised_Semantic_Segmentation_CVPR_2018_paper.pdf)
+- [Offical caffe implementation] (https://github.com/speedinghzl/DSRG)
+- 
+![Alt text](ref_img/dsrg.jpg?raw=true "DSRG Model")
 
 # Dataset
 In this implementation, we mainly consider the Pascal VOC 2012 dataset (VOC2012). Note that we are using the *trainaug* set for training the DSRG model while *val* set for evaluating: 
