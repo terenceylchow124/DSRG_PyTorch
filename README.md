@@ -20,7 +20,7 @@ We use ImageNet pretrained model:
 # Localization Cues Preparation
 Decompress provided localization cues:
 - gzip -kd datalist/PascalVOC/localization_cues.pickle.gz
-- Please check the [offical repository](https://github.com/kolesman/SEC) for details
+- Please check the [offical repository](https://github.com/speedinghzl/DSRG) for details
 
 # Prerequisites
 Fully connected CRF wrapper
