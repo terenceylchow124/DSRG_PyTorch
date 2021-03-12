@@ -63,10 +63,10 @@ def single_generate_seed_step(params):
 def dsrg_layer(targets, labels, probs_ori, num_classes, thre_fg, thre_bg, NUM_WORKERS):
     
     targets = torch.reshape(targets,(-1,1,1,num_classes))
-    targets[:,:,:,0] = 1 
     labels = torch.transpose(labels, 1, 3) # bx41x41x21
     probs = torch.transpose(probs_ori, 1, 3) # bx41x41x21
-    probs = probs.clone().detach()
+    targets[:,:,:,0] = 1 
+    # probs = probs.clone().detach()
     
     batch_size = targets.shape[0]
     complete_para_list = []
@@ -90,10 +90,10 @@ def dsrg_layer(targets, labels, probs_ori, num_classes, thre_fg, thre_bg, NUM_WO
 def dsrg_seed_loss_layer(probs, labels):
     
     count_bg = torch.sum(labels[:,0:1,:,:], dim=(2, 3, 1), keepdim=True)
-    loss_bg = -torch.mean(torch.sum(labels[:,0:1,:,:] * torch.log(probs[:,0:1,:,:]), dim=(2, 3, 1), keepdim=True) / (count_bg+MIN_PROB))
+    loss_bg = -torch.mean(torch.sum(labels[:,0:1,:,:] * torch.log(probs[:,0:1,:,:]), dim=(2, 3, 1), keepdim=True) / (count_bg+1e-8))
     
     count_fg = torch.sum(labels[:,1:,:,:], dim=(2, 3, 1), keepdim=True)
-    loss_fg = -torch.mean(torch.sum(labels[:,1:,:,:] * torch.log(probs[:,1:,:,:]), dim=(2, 3, 1), keepdim=True) / (count_fg+MIN_PROB))
+    loss_fg = -torch.mean(torch.sum(labels[:,1:,:,:] * torch.log(probs[:,1:,:,:]), dim=(2, 3, 1), keepdim=True) / (count_fg+1e-8))
     loss_balanced = loss_bg+loss_fg
     
     count_bg_avg = torch.mean(count_bg.squeeze())
